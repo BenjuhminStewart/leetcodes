@@ -5,7 +5,6 @@ import (
 	leetcodes "leetcodes/ArraysAndHashing/IsAnagram"
 	"leetcodes/helpers"
 	"math/rand"
-	"time"
 )
 
 func getRandomInputIsAnagram(n int) []string {
@@ -36,23 +35,14 @@ func getWorstCaseInputIsAnagram(n int) []string {
 	return res
 }
 
-func TimeIsAnagram(size, iterations int) {
-	fmt.Printf("\nTiming 'IsAnagram' | n => %v\n\n", size)
+func TimeIsAnagram(size int) {
+	helpers.PrintHeader("IsAnagram", size)
 	input := getRandomInputIsAnagram(size)
 	input_worst := getWorstCaseInputIsAnagram(size)
 
-	times := make([]time.Duration, iterations)
-	times_worst := make([]time.Duration, iterations)
-	for i := 0; i < iterations; i++ {
-		timer1 := time.NewTimer(time.Second)
-		leetcodes.IsAnagram(input[0], input[1])
-		times[i] = time.Since(<-timer1.C)
-		timer1.Stop()
-		timer2 := time.NewTimer(time.Second)
-		leetcodes.IsAnagram(input_worst[0], input_worst[1])
-		times_worst[i] = time.Since(<-timer2.C)
-		timer2.Stop()
-	}
-	fmt.Printf("\tRandom:     %v\n", helpers.GetAverageTime(times))
-	fmt.Printf("\tWorst Case: %v\n", helpers.GetAverageTime(times_worst))
+	time_elapsed := helpers.TimeFunctionInputTwoStringsOutputBool(leetcodes.IsAnagram, input[0], input[1])
+	fmt.Printf("\tRandom:     %v\n", time_elapsed)
+
+	time_worst := helpers.TimeFunctionInputTwoStringsOutputBool(leetcodes.IsAnagram, input_worst[0], input_worst[1])
+	fmt.Printf("\tWorst Case: %v\n", time_worst)
 }

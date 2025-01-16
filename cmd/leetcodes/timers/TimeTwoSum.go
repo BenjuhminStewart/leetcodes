@@ -5,7 +5,6 @@ import (
 	leetcodes "leetcodes/ArraysAndHashing/TwoSum"
 	"leetcodes/helpers"
 	"math/rand"
-	"time"
 )
 
 func getRandomInputTwoSum(n int) ([]int, int) {
@@ -25,23 +24,15 @@ func getWorstCaseInputTwoSum(n int) ([]int, int) {
 	return nums, -1
 }
 
-func TimeTwoSum(n, iterations int) {
-	fmt.Printf("\nTiming 'TwoSum' | n => %v\n\n", n)
+func TimeTwoSum(n int) {
+	helpers.PrintHeader("TwoSum", n)
+
 	arr, target := getRandomInputTwoSum(n)
 	arr_worst, target_worst := getWorstCaseInputTwoSum(n)
 
-	times := make([]time.Duration, iterations)
-	times_worst := make([]time.Duration, iterations)
-	for i := 0; i < iterations; i++ {
-		timer1 := time.NewTimer(time.Second)
-		leetcodes.TwoSum(arr, target)
-		times[i] = time.Since(<-timer1.C)
-		timer1.Stop()
-		timer2 := time.NewTimer(time.Second)
-		leetcodes.TwoSum(arr_worst, target_worst)
-		times_worst[i] = time.Since(<-timer2.C)
-		timer2.Stop()
-	}
-	fmt.Printf("\tRandom:      %v\n", helpers.GetAverageTime(times))
-	fmt.Printf("\tWorst Case:  %v\n", helpers.GetAverageTime(times_worst))
+	time_elapsed := helpers.TimeFunctionInputIntArrayIntOutputIntArray(leetcodes.TwoSum, arr, target)
+	fmt.Printf("\tRandom:      %v\n", time_elapsed)
+
+	time_worst := helpers.TimeFunctionInputIntArrayIntOutputIntArray(leetcodes.TwoSum, arr_worst, target_worst)
+	fmt.Printf("\tWorst Case:  %v\n", time_worst)
 }

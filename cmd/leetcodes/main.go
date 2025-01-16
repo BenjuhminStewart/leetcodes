@@ -15,7 +15,6 @@ type Params struct {
 const (
 	DEFUALT_SIZE   = 1_000_000
 	DEFAULT_METHOD = "ALL"
-	ITERATIONS     = 1
 )
 
 func main() {
@@ -24,22 +23,40 @@ func main() {
 	// arg[2] is the input size they want to test
 
 	arguments := parseArgs()
-	if arguments.method == "ALL" {
-		fmt.Printf("\nTiming All Leetcodes\n")
-		timers.TimeAllFunctions(arguments.size, ITERATIONS)
-	} else {
-		switch arguments.method {
-		case "ContainsDuplicate":
-			timers.TimeContainsDuplicate(arguments.size, ITERATIONS)
-		case "IsAnagram":
-			timers.TimeIsAnagram(arguments.size, ITERATIONS)
-		case "TwoSum":
-			timers.TimeTwoSum(arguments.size, ITERATIONS)
-		default:
-			fmt.Println("Error: Invalid method name")
-			os.Exit(1)
-		}
+	switch arguments.method {
+	case "ALL":
+		timers.TimeAllFunctions(arguments.size)
+	case "ArraysAndHashing":
+		timers.TimeArrayAndHashingFunctions(arguments.size)
+	case "TwoPointers":
+		timers.TimeTwoPointersFunctions(arguments.size)
+	case "ContainsDuplicate":
+		timers.TimeContainsDuplicate(arguments.size)
+	case "IsAnagram":
+		timers.TimeIsAnagram(arguments.size)
+	case "TwoSum":
+		timers.TimeTwoSum(arguments.size)
+	case "ValidPalindrome":
+		timers.TimeValidPalindrome(arguments.size)
+	case "help":
+		printHelp()
+	default:
+		fmt.Println("Error: Invalid method name")
+		printHelp()
+		os.Exit(1)
 	}
+}
+
+func printHelp() {
+	fmt.Println("Usage: leetcodes [method] [input_size_n]")
+	fmt.Println("Available methods:")
+	fmt.Println("- ALL")
+	fmt.Println("- ArraysAndHashing")
+	fmt.Println("  - ContainsDuplicate")
+	fmt.Println("  - IsAnagram")
+	fmt.Println("  - TwoSum")
+	fmt.Println("- TwoPointers")
+	fmt.Println("  - ValidPalindrome")
 }
 
 func parseArgs() Params {

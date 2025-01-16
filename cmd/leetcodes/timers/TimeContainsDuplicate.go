@@ -5,7 +5,6 @@ import (
 	leetcodes "leetcodes/ArraysAndHashing/ContainsDuplicate"
 	"leetcodes/helpers"
 	"math/rand"
-	"time"
 )
 
 func getRandomInputContainsDuplicate(n int) []int {
@@ -24,22 +23,15 @@ func getWorstCaseInputContainsDuplicate(n int) []int {
 	return nums
 }
 
-func TimeContainsDuplicate(size, iterations int) {
-	fmt.Printf("\nTiming 'ContainsDuplicate' | n => %v\n\n", size)
+func TimeContainsDuplicate(size int) {
+	helpers.PrintHeader("ContainsDuplicate", size)
+
 	input := getRandomInputContainsDuplicate(size)
 	input_worst := getWorstCaseInputContainsDuplicate(size)
-	times := make([]time.Duration, iterations)
-	times_worst := make([]time.Duration, iterations)
-	for i := 0; i < iterations; i++ {
-		timer1 := time.NewTimer(time.Second)
-		leetcodes.ContainsDuplicate(input)
-		times[i] = time.Since(<-timer1.C)
-		timer1.Stop()
-		timer2 := time.NewTimer(time.Second)
-		leetcodes.ContainsDuplicate(input_worst)
-		times_worst[i] = time.Since(<-timer2.C)
-		timer2.Stop()
-	}
-	fmt.Printf("\tRandom:     %v\n", helpers.GetAverageTime(times))
-	fmt.Printf("\tWorst Case: %v\n", helpers.GetAverageTime(times_worst))
+
+	time_norm := helpers.TimeFunctionInputArrayOutputBool(leetcodes.ContainsDuplicate, input)
+	fmt.Printf("\tRandom:     %v\n", time_norm)
+
+	time_worst := helpers.TimeFunctionInputArrayOutputBool(leetcodes.ContainsDuplicate, input_worst)
+	fmt.Printf("\tWorst Case: %v\n", time_worst)
 }
