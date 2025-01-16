@@ -48,6 +48,7 @@ func TestIsAnagram(t *testing.T) {
 		{"a", "a", true},
 		{"", "", true},
 		{"!#@$%&^*)(", "()*^&$%#!@", true},
+		{"ab", "a", false},
 	}
 
 	for _, tc := range testCases {
