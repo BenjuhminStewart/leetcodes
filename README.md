@@ -30,11 +30,11 @@ In the root directory of the project, run:
 
 This will default to timing ALL functions with a default input size of 1,000,000.
 ```bash
-$ ./time_functions
+$ ./leetcodes
 ```
 ### Timing specific groups or functions``
 
-The syntax for timing in the command line is `./time_functions [method] [input_size]`
+The syntax for timing in the command line is `./leetcodes [method] [input_size]`
 
 Method can be a group, for example `ArraysAndHashing` or `TwoPointers`, or a specific function, for example `ContainsDuplicate` or `ValidPalindrome`.
 
@@ -43,25 +43,25 @@ Input size can be any integer (However, I would recommend staying below 100,000,
 Examples:
 
 ```bash
-$ ./time_functions ArraysAndHashing 10
+$ ./leetcodes ArraysAndHashing 10
 ```
 
 ```bash
-$ ./time_functions TwoPointers 10
+$ ./leetcodes TwoPointers 10
 ```
 
 ```bash
-$ ./time_functions ContainsDuplicate 10
+$ ./leetcodes ContainsDuplicate 10
 ```
 
 ```bash
-$ ./time_functions ValidPalindrome 10
+$ ./leetcodes ValidPalindrome 10
 ```
 
 If you ever get confused on which methods you can use, you can use the `help` flag to see a list of available methods as well as the instructions on how to use the command
 
 ```bash
-$ ./time_functions help
+$ ./leetcodes help
 ```
 
 ## Contributing
