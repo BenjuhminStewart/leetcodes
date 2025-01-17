@@ -9,6 +9,7 @@ import (
 func TimeAllFunctions(n int) {
 	TimeArrayAndHashingFunctions(n)
 	TimeTwoPointersFunctions(n)
+	TimeSlidingWindowFunctions(n)
 }
 
 func TimeArrayAndHashingFunctions(n int) {
@@ -23,4 +24,10 @@ func TimeTwoPointersFunctions(n int) {
 	title := color.New(color.FgBlue, color.Bold).Add(color.Underline).Sprintf("\nTwo Pointers Functions\n")
 	fmt.Printf("%v", title)
 	TimeValidPalindrome(n)
+}
+
+func TimeSlidingWindowFunctions(n int) {
+	title := color.New(color.FgBlue, color.Bold).Add(color.Underline).Sprintf("\nSliding Window Functions\n")
+	fmt.Printf("%v", title)
+	TimeBuyAndSellStocks(n)
 }
