@@ -16,6 +16,7 @@ type fn_str_str_bool func(string, string) bool
 type fn_intarr_int_intarr func([]int, int) []int
 type fn_str_bool func(string) bool
 type fn_intarr_int func([]int) int
+type fn_strarr_strarrarr func([]string) [][]string
 
 func TimeFunctionInputArrayOutputBool(f fn_arr_bool, input []int) time.Duration {
 	timer := time.NewTimer(time.Second)
@@ -56,6 +57,14 @@ func TimeFunctionInputIntArrayOutputInt(f fn_intarr_int, input []int) time.Durat
 	timeElapsed := time.Since(<-timer.C)
 	timer.Stop()
 	return timeElapsed
+}
+
+func TimeFunctionInputStringArrayOutputStringArrayArray(f fn_strarr_strarrarr, input []string) []time.Duration {
+	timer := time.NewTimer(time.Second)
+	f(input)
+	timeElapsed := time.Since(<-timer.C)
+	timer.Stop()
+	return []time.Duration{timeElapsed}
 }
 
 func GetAverageTime(times []time.Duration) time.Duration {
