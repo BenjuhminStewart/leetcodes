@@ -40,6 +40,8 @@ func main() {
 		timers.TimeValidPalindrome(arguments.size)
 	case "BuyAndSellStocks":
 		timers.TimeBuyAndSellStocks(arguments.size)
+	case "GroupAnagrams":
+		timers.TimeGroupAnagrams(arguments.size)
 	case "help":
 		printHelp()
 	default:

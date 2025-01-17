@@ -18,6 +18,7 @@ func TimeArrayAndHashingFunctions(n int) {
 	TimeContainsDuplicate(n)
 	TimeIsAnagram(n)
 	TimeTwoSum(n)
+	TimeGroupAnagrams(n)
 }
 
 func TimeTwoPointersFunctions(n int) {
