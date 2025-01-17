@@ -38,6 +38,8 @@ func main() {
 		timers.TimeTwoSum(arguments.size)
 	case "ValidPalindrome":
 		timers.TimeValidPalindrome(arguments.size)
+	case "BuyAndSellStocks":
+		timers.TimeBuyAndSellStocks(arguments.size)
 	case "help":
 		printHelp()
 	default:
@@ -57,6 +59,8 @@ func printHelp() {
 	fmt.Println("  - TwoSum")
 	fmt.Println("- TwoPointers")
 	fmt.Println("  - ValidPalindrome")
+	fmt.Println("- SlidingWindow")
+	fmt.Println("  - BuyAndSellStocks")
 }
 
 func parseArgs() Params {
