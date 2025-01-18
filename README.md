@@ -83,3 +83,9 @@ When adding a solution to a leetcode problem, make sure to take care of the foll
 Basically, just make sure it's integrated with the CLI for timing the functions
 
 If you want to contribute to refactoring the code, or adding new functionality feel free to do that and submit a pr and I will look over it.
+
+## Forking
+
+You can also fork this repository and make your own changes.
+
+For example, if you want to use a different solution to a leetcode problem, you can fork this repository and make your own changes and then run the timer on your solution and see how fast it is with different values of `n`.
