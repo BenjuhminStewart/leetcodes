@@ -46,4 +46,5 @@ func Time1DDPFunctions(n int) {
 	fmt.Printf("%v", title)
 	TimeClimbingStairs(n)
 	TimeMinCostClimbingStairs(n)
+	TimeHouseRobber(n)
 }

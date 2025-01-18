@@ -54,6 +54,8 @@ func main() {
 		timers.TimeClimbingStairs(arguments.size)
 	case "MinCostClimbingStairs":
 		timers.TimeMinCostClimbingStairs(arguments.size)
+	case "HouseRobber":
+		timers.TimeHouseRobber(arguments.size)
 	case "help":
 		printHelp()
 	default:
@@ -80,6 +82,7 @@ func printHelp() {
 	fmt.Println("- 1DDP")
 	fmt.Println("  - ClimbingStairs")
 	fmt.Println("  - MinCostClimbingStairs")
+	fmt.Println("  - HouseRobber")
 }
 
 func parseArgs() Params {
