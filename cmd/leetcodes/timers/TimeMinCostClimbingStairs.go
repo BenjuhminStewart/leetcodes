@@ -2,7 +2,7 @@ package timers
 
 import (
 	"fmt"
-	leetcodes "leetcodes/1D-DP/MinCostClimbingStairs"
+	leetcodes "leetcodes/1DDP/MinCostClimbingStairs"
 	"leetcodes/helpers"
 	"math/rand"
 )

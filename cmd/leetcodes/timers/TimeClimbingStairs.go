@@ -2,7 +2,7 @@ package timers
 
 import (
 	"fmt"
-	leetcodes "leetcodes/1D-DP/ClimbingStairs"
+	leetcodes "leetcodes/1DDP/ClimbingStairs"
 	"leetcodes/helpers"
 
 	"github.com/fatih/color"
