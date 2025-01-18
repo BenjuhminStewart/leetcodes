@@ -30,6 +30,10 @@ func main() {
 		timers.TimeArrayAndHashingFunctions(arguments.size)
 	case "TwoPointers":
 		timers.TimeTwoPointersFunctions(arguments.size)
+	case "SlidingWindows":
+		timers.TimeSlidingWindowFunctions(arguments.size)
+	case "BinarySearchFunctions":
+		timers.TimeBinarySearchFunctions(arguments.size)
 	case "ContainsDuplicate":
 		timers.TimeContainsDuplicate(arguments.size)
 	case "IsAnagram":
@@ -42,6 +46,8 @@ func main() {
 		timers.TimeBuyAndSellStocks(arguments.size)
 	case "GroupAnagrams":
 		timers.TimeGroupAnagrams(arguments.size)
+	case "BinarySearch":
+		timers.TimeBinarySearch(arguments.size)
 	case "help":
 		printHelp()
 	default:
@@ -61,8 +67,10 @@ func printHelp() {
 	fmt.Println("  - TwoSum")
 	fmt.Println("- TwoPointers")
 	fmt.Println("  - ValidPalindrome")
-	fmt.Println("- SlidingWindow")
+	fmt.Println("- SlidingWindows")
 	fmt.Println("  - BuyAndSellStocks")
+	fmt.Println("- BinarySearchFunctions")
+	fmt.Println("  - BinarySearch")
 }
 
 func parseArgs() Params {
