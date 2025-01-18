@@ -11,6 +11,7 @@ func TimeAllFunctions(n int) {
 	TimeTwoPointersFunctions(n)
 	TimeSlidingWindowFunctions(n)
 	TimeBinarySearchFunctions(n)
+	Time1DDPFunctions(n)
 }
 
 func TimeArrayAndHashingFunctions(n int) {
@@ -38,4 +39,10 @@ func TimeBinarySearchFunctions(n int) {
 	title := color.New(color.FgBlue, color.Bold).Add(color.Underline).Sprintf("\nBinary Search Functions\n")
 	fmt.Printf("%v", title)
 	TimeBinarySearch(n)
+}
+
+func Time1DDPFunctions(n int) {
+	title := color.New(color.FgBlue, color.Bold).Add(color.Underline).Sprintf("\n1D DP Functions\n")
+	fmt.Printf("%v", title)
+	TimeClimbingStairs(n)
 }

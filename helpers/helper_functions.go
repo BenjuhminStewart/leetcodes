@@ -11,6 +11,7 @@ func PrintHeader(method string, size int) {
 	fmt.Printf("\nTiming %v | n => %v\n\n", title, size)
 }
 
+type fn_int_int func(int) int
 type fn_arr_bool func([]int) bool
 type fn_str_str_bool func(string, string) bool
 type fn_intarr_int_intarr func([]int, int) []int
@@ -18,6 +19,14 @@ type fn_intarr_int_int func([]int, int) int
 type fn_str_bool func(string) bool
 type fn_intarr_int func([]int) int
 type fn_strarr_strarrarr func([]string) [][]string
+
+func TimeFunctionInputIntOutputInt(f fn_int_int, input int) time.Duration {
+	timer := time.NewTimer(time.Second)
+	f(input)
+	timeElapsed := time.Since(<-timer.C)
+	timer.Stop()
+	return timeElapsed
+}
 
 func TimeFunctionInputArrayOutputBool(f fn_arr_bool, input []int) time.Duration {
 	timer := time.NewTimer(time.Second)
