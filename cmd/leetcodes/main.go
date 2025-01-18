@@ -34,6 +34,8 @@ func main() {
 		timers.TimeSlidingWindowFunctions(arguments.size)
 	case "BinarySearchFunctions":
 		timers.TimeBinarySearchFunctions(arguments.size)
+	case "1DDP":
+		timers.Time1DDPFunctions(arguments.size)
 	case "ContainsDuplicate":
 		timers.TimeContainsDuplicate(arguments.size)
 	case "IsAnagram":
@@ -48,6 +50,8 @@ func main() {
 		timers.TimeGroupAnagrams(arguments.size)
 	case "BinarySearch":
 		timers.TimeBinarySearch(arguments.size)
+	case "ClimbingStairs":
+		timers.TimeClimbingStairs(arguments.size)
 	case "help":
 		printHelp()
 	default:
