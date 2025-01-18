@@ -31,8 +31,8 @@ func TimeTwoSum(n int) {
 	arr_worst, target_worst := getWorstCaseInputTwoSum(n)
 
 	time_elapsed := helpers.TimeFunctionInputIntArrayIntOutputIntArray(leetcodes.TwoSum, arr, target)
-	fmt.Printf("\tRandom:      %v\n", time_elapsed)
+	fmt.Printf("\tRandom:     %v\n", time_elapsed)
 
 	time_worst := helpers.TimeFunctionInputIntArrayIntOutputIntArray(leetcodes.TwoSum, arr_worst, target_worst)
-	fmt.Printf("\tWorst Case:  %v\n", time_worst)
+	fmt.Printf("\tWorst Case: %v\n", time_worst)
 }

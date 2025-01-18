@@ -45,4 +45,5 @@ func Time1DDPFunctions(n int) {
 	title := color.New(color.FgBlue, color.Bold).Add(color.Underline).Sprintf("\n1D DP Functions\n")
 	fmt.Printf("%v", title)
 	TimeClimbingStairs(n)
+	TimeMinCostClimbingStairs(n)
 }

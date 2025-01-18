@@ -77,12 +77,12 @@ func TimeFunctionInputIntArrayIntOutputInt(f fn_intarr_int_int, input []int, tar
 	return timeElapsed
 }
 
-func TimeFunctionInputStringArrayOutputStringArrayArray(f fn_strarr_strarrarr, input []string) []time.Duration {
+func TimeFunctionInputStringArrayOutputStringArrayArray(f fn_strarr_strarrarr, input []string) time.Duration {
 	timer := time.NewTimer(time.Second)
 	f(input)
 	timeElapsed := time.Since(<-timer.C)
 	timer.Stop()
-	return []time.Duration{timeElapsed}
+	return timeElapsed
 }
 
 func GetAverageTime(times []time.Duration) time.Duration {

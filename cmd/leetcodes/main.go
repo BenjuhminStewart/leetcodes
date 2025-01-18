@@ -52,6 +52,8 @@ func main() {
 		timers.TimeBinarySearch(arguments.size)
 	case "ClimbingStairs":
 		timers.TimeClimbingStairs(arguments.size)
+	case "MinCostClimbingStairs":
+		timers.TimeMinCostClimbingStairs(arguments.size)
 	case "help":
 		printHelp()
 	default:
@@ -75,6 +77,9 @@ func printHelp() {
 	fmt.Println("  - BuyAndSellStocks")
 	fmt.Println("- BinarySearchFunctions")
 	fmt.Println("  - BinarySearch")
+	fmt.Println("- 1DDP")
+	fmt.Println("  - ClimbingStairs")
+	fmt.Println("  - MinCostClimbingStairs")
 }
 
 func parseArgs() Params {

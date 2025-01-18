@@ -33,5 +33,5 @@ func TimeClimbingStairs(size int) {
 	input_worst := GetWorstCaseInputClimbingStairs(actual_size)
 
 	time_worst := helpers.TimeFunctionInputIntOutputInt(leetcodes.ClimbingStairs, input_worst)
-	fmt.Printf("\tTime: %v\n", time_worst)
+	fmt.Printf("\tTime:       %v\n", time_worst)
 }
