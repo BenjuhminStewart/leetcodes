@@ -9,7 +9,7 @@ import (
 )
 
 const (
-	MAX_N = 91
+	MAX_N_CLIMBING_STAIRS = 91
 )
 
 func GetRandomInputClimbingStairs(n int) int {
@@ -21,13 +21,13 @@ func GetWorstCaseInputClimbingStairs(n int) int {
 }
 
 func TimeClimbingStairs(size int) {
-	var actual_size int
-	if size > MAX_N {
-		actual_size = MAX_N
+	actual_size := size
+	if size > MAX_N_CLIMBING_STAIRS {
+		actual_size = MAX_N_CLIMBING_STAIRS
 	}
 	helpers.PrintHeader("ClimbingStairs", actual_size)
-	if size > MAX_N {
-		color.Red("N is limited to %v for this function\n\n", MAX_N)
+	if size > MAX_N_CLIMBING_STAIRS {
+		color.Red("*N is limited to %v due to surpassing 64 bit integer size*\n\n", MAX_N_CLIMBING_STAIRS)
 	}
 
 	input_worst := GetWorstCaseInputClimbingStairs(actual_size)

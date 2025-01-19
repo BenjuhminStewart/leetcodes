@@ -38,6 +38,8 @@ func main() {
 		timers.Time1DDPFunctions(arguments.size)
 	case "LinkedList":
 		timers.TimeLinkedListFunctions(arguments.size)
+	case "Tree":
+		timers.TimeTreeFunctions(arguments.size)
 	case "ContainsDuplicate":
 		timers.TimeContainsDuplicate(arguments.size)
 	case "IsAnagram":
@@ -62,6 +64,8 @@ func main() {
 		timers.TimeReverseList(arguments.size)
 	case "MergeTwoSortedLists":
 		timers.TimeMergeTwoSortedLists(arguments.size)
+	case "InvertBinaryTree":
+		timers.TimeInvertBinaryTree(arguments.size)
 	case "help":
 		printHelp()
 	default:
@@ -92,6 +96,8 @@ func printHelp() {
 	fmt.Println("- LinkedList")
 	fmt.Println("  - ReverseLinkedList")
 	fmt.Println("  - MergeTwoSortedLists")
+	fmt.Println("- Tree")
+	fmt.Println("  - InvertBinaryTree")
 }
 
 func parseArgs() Params {

@@ -22,6 +22,7 @@ type fn_intarr_int func([]int) int
 type fn_strarr_strarrarr func([]string) [][]string
 type fn_ll_ll func(*types.ListNode) *types.ListNode
 type fn_ll_ll_ll func(*types.ListNode, *types.ListNode) *types.ListNode
+type fn_tree_tree func(*types.TreeNode) *types.TreeNode
 
 func TimeFunctionInputIntOutputInt(f fn_int_int, input int) time.Duration {
 	timer := time.NewTimer(time.Second)
@@ -99,6 +100,14 @@ func TimeFunctionInputListNodeOutputListNode(f fn_ll_ll, input *types.ListNode) 
 func TimeFunctionInputListNodeListNodeOutputListNode(f fn_ll_ll_ll, input1 *types.ListNode, input2 *types.ListNode) time.Duration {
 	timer := time.NewTimer(time.Second)
 	f(input1, input2)
+	timeElapsed := time.Since(<-timer.C)
+	timer.Stop()
+	return timeElapsed
+}
+
+func TimeFunctionInputTreeNodeOutputTreeNode(f fn_tree_tree, input *types.TreeNode) time.Duration {
+	timer := time.NewTimer(time.Second)
+	f(input)
 	timeElapsed := time.Since(<-timer.C)
 	timer.Stop()
 	return timeElapsed

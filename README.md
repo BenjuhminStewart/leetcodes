@@ -4,6 +4,16 @@ Welcome to the Go Leetcodes repository! This repository contains a collection of
 
 ## Testing
 
+### Testing ALL
+
+Run the following command in the root directory of the project to run all tests
+
+```bash
+$ go test ./...
+```
+
+can also add the `-v` flag to get more information or the `-cover` flag to get coverage information. (NOTE: Timing Functions do not have tests and same with helper functions as they are just function generics used to reuse functions rather than having repetitive code)
+
 ### General testing:
 
 In order to run a test, simply navigate to the function you want to test and run `go test -v`
