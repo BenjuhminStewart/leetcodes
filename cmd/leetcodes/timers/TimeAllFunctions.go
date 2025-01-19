@@ -54,4 +54,5 @@ func TimeLinkedListFunctions(n int) {
 	title := color.New(color.FgBlue, color.Bold).Add(color.Underline).Sprintf("\nLinked List Functions\n")
 	fmt.Printf("%v", title)
 	TimeReverseList(n)
+	TimeMergeTwoSortedLists(n)
 }
