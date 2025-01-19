@@ -13,6 +13,7 @@ func TimeAllFunctions(n int) {
 	TimeBinarySearchFunctions(n)
 	Time1DDPFunctions(n)
 	TimeLinkedListFunctions(n)
+	TimeTreeFunctions(n)
 }
 
 func TimeArrayAndHashingFunctions(n int) {
@@ -55,4 +56,10 @@ func TimeLinkedListFunctions(n int) {
 	fmt.Printf("%v", title)
 	TimeReverseList(n)
 	TimeMergeTwoSortedLists(n)
+}
+
+func TimeTreeFunctions(n int) {
+	title := color.New(color.FgBlue, color.Bold).Add(color.Underline).Sprintf("\nTree Functions\n")
+	fmt.Printf("%v", title)
+	TimeInvertBinaryTree(n)
 }

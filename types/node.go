@@ -54,22 +54,8 @@ func GenerateRandomList(n int) *ListNode {
 	return dummy.Next.Next
 }
 
-func (node *ListNode) Print() {
-	if node == nil {
-		fmt.Println("nil")
-		return
-	}
-
-	fmt.Printf("ListNode: ")
-	for node != nil {
-		fmt.Printf("%v ", node.Val)
-		node = node.Next
-	}
-	fmt.Println()
-}
-
 func (node *ListNode) Stringify() string {
-	s := ""
+	s := "ListNode: "
 	if node == nil {
 		return "nil"
 	}
@@ -89,4 +75,16 @@ func (node *ListNode) IsEqualTo(other *ListNode) bool {
 		other = other.Next
 	}
 	return node == other
+}
+
+func (node *ListNode) Length() int {
+	if node == nil {
+		return 0
+	}
+	length := 1
+	for node.Next != nil {
+		length++
+		node = node.Next
+	}
+	return length
 }
