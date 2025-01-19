@@ -20,11 +20,8 @@ func TestReverseLinkedList(t *testing.T) {
 	for _, tc := range testCases {
 		got := ReverseList(tc.input)
 
-		fmt.Printf("Input: \n")
 		printListNode(got)
-		fmt.Printf("\nExpected: \n")
 		printListNode(tc.expected)
-		fmt.Printf("\n")
 		if !areListNodesEqual(got, tc.expected) {
 			t.Errorf("Expected %v, got %v", tc.expected, got)
 		}

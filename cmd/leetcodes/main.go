@@ -60,6 +60,8 @@ func main() {
 		timers.TimeHouseRobber(arguments.size)
 	case "ReverseLinkedList":
 		timers.TimeReverseList(arguments.size)
+	case "MergeTwoSortedLists":
+		timers.TimeMergeTwoSortedLists(arguments.size)
 	case "help":
 		printHelp()
 	default:
@@ -89,6 +91,7 @@ func printHelp() {
 	fmt.Println("  - HouseRobber")
 	fmt.Println("- LinkedList")
 	fmt.Println("  - ReverseLinkedList")
+	fmt.Println("  - MergeTwoSortedLists")
 }
 
 func parseArgs() Params {
