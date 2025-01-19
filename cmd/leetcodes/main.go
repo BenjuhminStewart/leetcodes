@@ -38,6 +38,8 @@ func main() {
 		timers.Time1DDPFunctions(arguments.size)
 	case "LinkedList":
 		timers.TimeLinkedListFunctions(arguments.size)
+	case "Stack":
+		timers.TimeStackFunctions(arguments.size)
 	case "Tree":
 		timers.TimeTreeFunctions(arguments.size)
 	case "ContainsDuplicate":
@@ -66,6 +68,8 @@ func main() {
 		timers.TimeMergeTwoSortedLists(arguments.size)
 	case "InvertBinaryTree":
 		timers.TimeInvertBinaryTree(arguments.size)
+	case "ValidParentheses":
+		timers.TimeValidParentheses(arguments.size)
 	case "help":
 		printHelp()
 	default:
@@ -79,25 +83,27 @@ func printHelp() {
 	fmt.Println("Usage: leetcodes [method] [input_size_n]")
 	fmt.Println("Available methods:")
 	fmt.Println("- ALL")
-	fmt.Println("- ArraysAndHashing")
-	fmt.Println("  - ContainsDuplicate")
-	fmt.Println("  - IsAnagram")
-	fmt.Println("  - TwoSum")
-	fmt.Println("- TwoPointers")
-	fmt.Println("  - ValidPalindrome")
-	fmt.Println("- SlidingWindows")
-	fmt.Println("  - BuyAndSellStocks")
-	fmt.Println("- BinarySearchFunctions")
-	fmt.Println("  - BinarySearch")
 	fmt.Println("- 1DDP")
 	fmt.Println("  - ClimbingStairs")
 	fmt.Println("  - MinCostClimbingStairs")
 	fmt.Println("  - HouseRobber")
+	fmt.Println("- ArraysAndHashing")
+	fmt.Println("  - ContainsDuplicate")
+	fmt.Println("  - IsAnagram")
+	fmt.Println("  - TwoSum")
+	fmt.Println("- BinarySearchFunctions")
+	fmt.Println("  - BinarySearch")
+	fmt.Println("- SlidingWindows")
+	fmt.Println("  - BuyAndSellStocks")
+	fmt.Println("- Stack")
+	fmt.Println("  - ValidParentheses")
 	fmt.Println("- LinkedList")
-	fmt.Println("  - ReverseLinkedList")
 	fmt.Println("  - MergeTwoSortedLists")
+	fmt.Println("  - ReverseLinkedList")
 	fmt.Println("- Tree")
 	fmt.Println("  - InvertBinaryTree")
+	fmt.Println("- TwoPointers")
+	fmt.Println("  - ValidPalindrome")
 }
 
 func parseArgs() Params {
