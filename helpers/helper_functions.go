@@ -3,7 +3,7 @@ package helpers
 import (
 	"fmt"
 	"github.com/fatih/color"
-	leetcodes "leetcodes/LinkedList/ReverseLinkedList"
+	"leetcodes/types"
 	"time"
 )
 
@@ -20,8 +20,8 @@ type fn_intarr_int_int func([]int, int) int
 type fn_str_bool func(string) bool
 type fn_intarr_int func([]int) int
 type fn_strarr_strarrarr func([]string) [][]string
-type fn_ll_ll func(*leetcodes.ListNode) *leetcodes.ListNode
-type fn_ll_ll_ll func(*leetcodes.ListNode, *leetcodes.ListNode) *leetcodes.ListNode
+type fn_ll_ll func(*types.ListNode) *types.ListNode
+type fn_ll_ll_ll func(*types.ListNode, *types.ListNode) *types.ListNode
 
 func TimeFunctionInputIntOutputInt(f fn_int_int, input int) time.Duration {
 	timer := time.NewTimer(time.Second)
@@ -88,7 +88,7 @@ func TimeFunctionInputStringArrayOutputStringArrayArray(f fn_strarr_strarrarr, i
 	return timeElapsed
 }
 
-func TimeFunctionInputListNodeOutputListNode(f fn_ll_ll, input *leetcodes.ListNode) time.Duration {
+func TimeFunctionInputListNodeOutputListNode(f fn_ll_ll, input *types.ListNode) time.Duration {
 	timer := time.NewTimer(time.Second)
 	f(input)
 	timeElapsed := time.Since(<-timer.C)
@@ -96,7 +96,7 @@ func TimeFunctionInputListNodeOutputListNode(f fn_ll_ll, input *leetcodes.ListNo
 	return timeElapsed
 }
 
-func TimeFunctionInputListNodeListNodeOutputListNode(f fn_ll_ll_ll, input1 *leetcodes.ListNode, input2 *leetcodes.ListNode) time.Duration {
+func TimeFunctionInputListNodeListNodeOutputListNode(f fn_ll_ll_ll, input1 *types.ListNode, input2 *types.ListNode) time.Duration {
 	timer := time.NewTimer(time.Second)
 	f(input1, input2)
 	timeElapsed := time.Since(<-timer.C)
