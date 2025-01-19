@@ -7,13 +7,14 @@ import (
 )
 
 func TimeAllFunctions(n int) {
-	TimeArrayAndHashingFunctions(n)
-	TimeTwoPointersFunctions(n)
-	TimeSlidingWindowFunctions(n)
-	TimeBinarySearchFunctions(n)
 	Time1DDPFunctions(n)
+	TimeArrayAndHashingFunctions(n)
+	TimeBinarySearchFunctions(n)
 	TimeLinkedListFunctions(n)
+	TimeSlidingWindowFunctions(n)
+	TimeStackFunctions(n)
 	TimeTreeFunctions(n)
+	TimeTwoPointersFunctions(n)
 }
 
 func TimeArrayAndHashingFunctions(n int) {
@@ -62,4 +63,10 @@ func TimeTreeFunctions(n int) {
 	title := color.New(color.FgBlue, color.Bold).Add(color.Underline).Sprintf("\nTree Functions\n")
 	fmt.Printf("%v", title)
 	TimeInvertBinaryTree(n)
+}
+
+func TimeStackFunctions(n int) {
+	title := color.New(color.FgBlue, color.Bold).Add(color.Underline).Sprintf("\nStack Functions\n")
+	fmt.Printf("%v", title)
+	TimeValidParentheses(n)
 }
