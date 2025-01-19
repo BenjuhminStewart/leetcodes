@@ -1,9 +1,9 @@
 package leetcode
 
-import leetcodes "leetcodes/LinkedList/ReverseLinkedList"
+import "leetcodes/types"
 
-func MergeTwoLists(l1 *leetcodes.ListNode, l2 *leetcodes.ListNode) *leetcodes.ListNode {
-	mergedList := &leetcodes.ListNode{}
+func MergeTwoLists(l1 *types.ListNode, l2 *types.ListNode) *types.ListNode {
+	mergedList := &types.ListNode{}
 	node := mergedList
 
 	for l1 != nil && l2 != nil {
