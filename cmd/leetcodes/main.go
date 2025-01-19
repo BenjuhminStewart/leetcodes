@@ -87,6 +87,8 @@ func printHelp() {
 	fmt.Println("  - ClimbingStairs")
 	fmt.Println("  - MinCostClimbingStairs")
 	fmt.Println("  - HouseRobber")
+	fmt.Println("- LinkedList")
+	fmt.Println("  - ReverseLinkedList")
 }
 
 func parseArgs() Params {
