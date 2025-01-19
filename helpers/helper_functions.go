@@ -3,6 +3,7 @@ package helpers
 import (
 	"fmt"
 	"github.com/fatih/color"
+	leetcodes "leetcodes/LinkedList/ReverseLinkedList"
 	"time"
 )
 
@@ -19,6 +20,7 @@ type fn_intarr_int_int func([]int, int) int
 type fn_str_bool func(string) bool
 type fn_intarr_int func([]int) int
 type fn_strarr_strarrarr func([]string) [][]string
+type fn_ll_ll func(*leetcodes.ListNode) *leetcodes.ListNode
 
 func TimeFunctionInputIntOutputInt(f fn_int_int, input int) time.Duration {
 	timer := time.NewTimer(time.Second)
@@ -78,6 +80,14 @@ func TimeFunctionInputIntArrayIntOutputInt(f fn_intarr_int_int, input []int, tar
 }
 
 func TimeFunctionInputStringArrayOutputStringArrayArray(f fn_strarr_strarrarr, input []string) time.Duration {
+	timer := time.NewTimer(time.Second)
+	f(input)
+	timeElapsed := time.Since(<-timer.C)
+	timer.Stop()
+	return timeElapsed
+}
+
+func TimeFunctionInputListNodeOutputListNode(f fn_ll_ll, input *leetcodes.ListNode) time.Duration {
 	timer := time.NewTimer(time.Second)
 	f(input)
 	timeElapsed := time.Since(<-timer.C)

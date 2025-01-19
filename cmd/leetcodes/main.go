@@ -36,6 +36,8 @@ func main() {
 		timers.TimeBinarySearchFunctions(arguments.size)
 	case "1DDP":
 		timers.Time1DDPFunctions(arguments.size)
+	case "LinkedList":
+		timers.TimeLinkedListFunctions(arguments.size)
 	case "ContainsDuplicate":
 		timers.TimeContainsDuplicate(arguments.size)
 	case "IsAnagram":
@@ -56,6 +58,8 @@ func main() {
 		timers.TimeMinCostClimbingStairs(arguments.size)
 	case "HouseRobber":
 		timers.TimeHouseRobber(arguments.size)
+	case "ReverseLinkedList":
+		timers.TimeReverseList(arguments.size)
 	case "help":
 		printHelp()
 	default:
@@ -83,6 +87,8 @@ func printHelp() {
 	fmt.Println("  - ClimbingStairs")
 	fmt.Println("  - MinCostClimbingStairs")
 	fmt.Println("  - HouseRobber")
+	fmt.Println("- LinkedList")
+	fmt.Println("  - ReverseLinkedList")
 }
 
 func parseArgs() Params {

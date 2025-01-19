@@ -12,6 +12,7 @@ func TimeAllFunctions(n int) {
 	TimeSlidingWindowFunctions(n)
 	TimeBinarySearchFunctions(n)
 	Time1DDPFunctions(n)
+	TimeLinkedListFunctions(n)
 }
 
 func TimeArrayAndHashingFunctions(n int) {
@@ -47,4 +48,10 @@ func Time1DDPFunctions(n int) {
 	TimeClimbingStairs(n)
 	TimeMinCostClimbingStairs(n)
 	TimeHouseRobber(n)
+}
+
+func TimeLinkedListFunctions(n int) {
+	title := color.New(color.FgBlue, color.Bold).Add(color.Underline).Sprintf("\nLinked List Functions\n")
+	fmt.Printf("%v", title)
+	TimeReverseList(n)
 }
