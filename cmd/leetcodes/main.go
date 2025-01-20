@@ -70,6 +70,8 @@ func main() {
 		timers.TimeInvertBinaryTree(arguments.size)
 	case "ValidParentheses":
 		timers.TimeValidParentheses(arguments.size)
+	case "TopKFrequentElements":
+		timers.TimeTopKFrequentElements(arguments.size)
 	case "help":
 		printHelp()
 	default:
@@ -89,7 +91,9 @@ func printHelp() {
 	fmt.Println("  - HouseRobber")
 	fmt.Println("- ArraysAndHashing")
 	fmt.Println("  - ContainsDuplicate")
+	fmt.Println("  - GroupAnagrams")
 	fmt.Println("  - IsAnagram")
+	fmt.Println("  - TopKFrequentElements")
 	fmt.Println("  - TwoSum")
 	fmt.Println("- BinarySearchFunctions")
 	fmt.Println("  - BinarySearch")
