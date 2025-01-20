@@ -21,9 +21,10 @@ func TimeArrayAndHashingFunctions(n int) {
 	title := color.New(color.FgBlue, color.Bold).Add(color.Underline).Sprintf("\nArray and Hashing Functions\n")
 	fmt.Printf("%v", title)
 	TimeContainsDuplicate(n)
-	TimeIsAnagram(n)
-	TimeTwoSum(n)
 	TimeGroupAnagrams(n)
+	TimeIsAnagram(n)
+	TimeTopKFrequentElements(n)
+	TimeTwoSum(n)
 }
 
 func TimeTwoPointersFunctions(n int) {
@@ -48,15 +49,15 @@ func Time1DDPFunctions(n int) {
 	title := color.New(color.FgBlue, color.Bold).Add(color.Underline).Sprintf("\n1D DP Functions\n")
 	fmt.Printf("%v", title)
 	TimeClimbingStairs(n)
-	TimeMinCostClimbingStairs(n)
 	TimeHouseRobber(n)
+	TimeMinCostClimbingStairs(n)
 }
 
 func TimeLinkedListFunctions(n int) {
 	title := color.New(color.FgBlue, color.Bold).Add(color.Underline).Sprintf("\nLinked List Functions\n")
 	fmt.Printf("%v", title)
-	TimeReverseList(n)
 	TimeMergeTwoSortedLists(n)
+	TimeReverseList(n)
 }
 
 func TimeTreeFunctions(n int) {
