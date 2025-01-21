@@ -64,6 +64,7 @@ func TimeTreeFunctions(n int) {
 	title := color.New(color.FgBlue, color.Bold).Add(color.Underline).Sprintf("\nTree Functions\n")
 	fmt.Printf("%v", title)
 	TimeInvertBinaryTree(n)
+	TimeMaxDepthBinaryTree(n)
 }
 
 func TimeStackFunctions(n int) {

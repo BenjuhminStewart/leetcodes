@@ -72,6 +72,8 @@ func main() {
 		timers.TimeValidParentheses(arguments.size)
 	case "TopKFrequentElements":
 		timers.TimeTopKFrequentElements(arguments.size)
+	case "MaxDepthBinaryTree":
+		timers.TimeMaxDepthBinaryTree(arguments.size)
 	case "help":
 		printHelp()
 	default:
@@ -106,6 +108,7 @@ func printHelp() {
 	fmt.Println("  - ReverseLinkedList")
 	fmt.Println("- Tree")
 	fmt.Println("  - InvertBinaryTree")
+	fmt.Println("  - MaxDepthBinaryTree")
 	fmt.Println("- TwoPointers")
 	fmt.Println("  - ValidPalindrome")
 }
